@@ -22,6 +22,7 @@ img {
   width: 365px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  display: block;
 }
 
 .main {
@@ -35,6 +36,10 @@ h1 {
   text-align: center;
   height: 100px;
   width: 365px;
+  margin: 0;
+  padding-top: 40px;
+  /* padding-bottom: 40px; */
+  font-size: 40px;
 }
 
 p {
@@ -43,6 +48,7 @@ p {
   text-align: center;
   height: 200px;
   width: 365px;
+  padding-top: 40px;
 }
 
 a {
@@ -53,11 +59,14 @@ a {
   font-family: 'Mulish', sans-serif;
   font-weight: bold;
   text-align: center;
-  /* border: 1px solid black; */
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 16px;
 }
 
 a[href="https://czechitas-podklady.cz/Piskvorky-pravidla/"] {
   background-color: #1fcca4;
+  border-bottom: 1px solid black;
 }
 
 a[href="https://czechitas-podklady.cz/Piskvorky-pravidla/"]:hover {
@@ -71,5 +80,3 @@ a[href="index.html"] {
 a[href="index.html"]:hover {
   background-color: #0090e9;
 }
-
-
