@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+body {
+  background: linear-gradient(to bottom, #615dad, #ffc8da);
+  background-attachment: fixed;
+}
+
+.main {
+  background-color: #283e50;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+}
+
+p {
+  font-family: 'Mulish', sans-serif;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+a[href="https://czechitas-podklady.cz/Piskvorky-pravidla/"] {
+  background-color: #1fcca4;
+}
+
+a[href="index.html"] {
+  background-color: #0197f6;
+}
