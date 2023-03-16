@@ -10,21 +10,50 @@ body {
   background-attachment: fixed;
 }
 
+.kontejner {
+  margin: 65px auto 0;
+  height: 620px;
+  width: 365px;
+
+}
+
+img {
+  height: 225px;
+  width: 365px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
 .main {
   background-color: #283e50;
+  height: 300px;
+  width: 365px;
 }
 
 h1 {
   font-family: 'Lobster', cursive;
+  text-align: center;
+  height: 100px;
+  width: 365px;
 }
 
 p {
   font-family: 'Mulish', sans-serif;
   font-weight: bold;
+  text-align: center;
+  height: 200px;
+  width: 365px;
 }
 
 a {
   text-decoration: none;
+  display: inline-block;
+  height: 50px;
+  width: 365px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  /* border: 1px solid black; */
 }
 
 a[href="https://czechitas-podklady.cz/Piskvorky-pravidla/"] {
@@ -34,3 +63,5 @@ a[href="https://czechitas-podklady.cz/Piskvorky-pravidla/"] {
 a[href="index.html"] {
   background-color: #0197f6;
 }
+
+
