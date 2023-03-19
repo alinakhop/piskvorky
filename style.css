@@ -14,7 +14,6 @@ body {
   margin: 65px auto 0;
   height: 620px;
   width: 365px;
-
 }
 
 img {
@@ -33,22 +32,25 @@ img {
 
 h1 {
   font-family: 'Lobster', cursive;
+  font-size: 45px;
+  font-weight: lighter;
+  line-height: 50px;
   text-align: center;
   height: 100px;
   width: 365px;
   margin: 0;
   padding-top: 40px;
-  /* padding-bottom: 40px; */
-  font-size: 40px;
 }
 
 p {
   font-family: 'Mulish', sans-serif;
+  font-size: 16px;
   font-weight: bold;
+  line-height: 22px;
   text-align: center;
   height: 200px;
   width: 365px;
-  padding-top: 40px;
+  padding: 30px 12px;
 }
 
 a {
@@ -57,11 +59,11 @@ a {
   height: 50px;
   width: 365px;
   font-family: 'Mulish', sans-serif;
+  font-size: 16px;
   font-weight: bold;
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
-  font-size: 16px;
 }
 
 a[href="https://czechitas-podklady.cz/Piskvorky-pravidla/"] {
