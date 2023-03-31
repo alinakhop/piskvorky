@@ -30,6 +30,10 @@ img {
   width: 365px;
 }
 
+.main-hra {
+  max-width: 80vmin
+}
+
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 45px;
@@ -75,10 +79,36 @@ a[href="https://czechitas-podklady.cz/Piskvorky-pravidla/"]:hover {
   background-color: #1cbb96;
 }
 
-a[href="index.html"] {
+a[href="hra.html"] {
   background-color: #0197f6;
 }
 
-a[href="index.html"]:hover {
+a[href="hra.html"]:hover {
   background-color: #0090e9;
+}
+
+.panel {
+  display: flex;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+
+  padding: 0;
+}
+
+.grid-item {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  padding: 20px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.grid-item:hover,
+.grid-item:focus {
+  background-color: #ffc8da;
+  opacity: .2;
 }
