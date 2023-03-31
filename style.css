@@ -31,7 +31,8 @@ img {
 }
 
 .main-hra {
-  max-width: 80vmin
+  max-width: 80vmin;
+  margin: 0 auto;
 }
 
 h1 {
@@ -44,6 +45,10 @@ h1 {
   width: 365px;
   margin: 0;
   padding-top: 40px;
+}
+
+.main-name {
+  margin: 0 auto;
 }
 
 p {
@@ -89,12 +94,54 @@ a[href="hra.html"]:hover {
 
 .panel {
   display: flex;
+  justify-content: space-between;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  height: 20px;
+  width: 20px;
+  border-radius: 60%;
+  border: 3px solid white;
+  display: inline-block;
+  align-self: center;
+  margin-left: 0.5rem;
+}
+
+.home,
+.restart {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 8px;
+  display: inline-block;
+}
+
+.home {
+  background-color: #1fcca4;
+}
+
+.home:hover,
+.home:focus {
+  background-color: #1cbb96;
+}
+
+.restart {
+  background-color: #0197f6;
+}
+
+.restart:hover,
+.restart:focus {
+  background-color: #0090e9;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
-
+  grid-template-columns: repeat(10, auto);
   padding: 0;
 }
 
