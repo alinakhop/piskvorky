@@ -16,7 +16,7 @@ body {
   width: 365px;
 }
 
-img {
+img.main-img {
   height: 225px;
   width: 365px;
   border-top-left-radius: 10px;
@@ -100,6 +100,7 @@ a[href="hra.html"]:hover {
 .player {
   display: flex;
   align-items: center;
+  text-transform: uppercase;
 }
 
 .circle {
@@ -112,16 +113,18 @@ a[href="hra.html"]:hover {
   margin-left: 0.5rem;
 }
 
-.home,
-.restart {
-  width: 50px;
-  height: 50px;
+.img.home,
+.img.restart,
+.buttons-hra-home,
+.buttons-hra-restart {
+  width: 30px;
+  height: 30px;
   border-radius: 5px;
-  padding: 8px;
+  padding: 3px;
   display: inline-block;
 }
 
-.home {
+.buttons-hra-home {
   background-color: #1fcca4;
 }
 
@@ -130,7 +133,7 @@ a[href="hra.html"]:hover {
   background-color: #1cbb96;
 }
 
-.restart {
+.buttons-hra-restart {
   background-color: #0197f6;
 }
 
@@ -142,7 +145,7 @@ a[href="hra.html"]:hover {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(10, auto);
-  padding: 0;
+  padding-top: 20px;
 }
 
 .grid-item {
@@ -152,6 +155,7 @@ a[href="hra.html"]:hover {
   padding: 20px;
   cursor: pointer;
   background-color: transparent;
+  aspect-ratio: 1/1;
 }
 
 .grid-item:hover,
