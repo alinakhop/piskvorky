@@ -1,15 +1,8 @@
+import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
+
 let currentPlayer = 'circle';
 
-const btnElm1 = document.querySelector('button:nth-child(1)');
-const btnElm2 = document.querySelector('button:nth-child(2)');
-const btnElm3 = document.querySelector('button:nth-child(3)');
-const btnElm4 = document.querySelector('button:nth-child(4)');
-const btnElm5 = document.querySelector('button:nth-child(5)');
-const btnElm6 = document.querySelector('button:nth-child(6)');
-const btnElm7 = document.querySelector('button:nth-child(7)');
-const btnElm8 = document.querySelector('button:nth-child(8)');
-const btnElm9 = document.querySelector('button:nth-child(9)');
-const btnElm10 = document.querySelector('button:nth-child(10)');
+const btnElm = document.querySelectorAll('button');
 
 const changeMove = (event) => {
   if (currentPlayer === 'circle') {
@@ -22,18 +15,44 @@ const changeMove = (event) => {
     player.className = 'board__player--circle';
   }
   event.target.disabled = true;
+  herniPole();
 };
 
-btnElm1.addEventListener('click', changeMove);
-btnElm2.addEventListener('click', changeMove);
-btnElm3.addEventListener('click', changeMove);
-btnElm4.addEventListener('click', changeMove);
-btnElm5.addEventListener('click', changeMove);
-btnElm6.addEventListener('click', changeMove);
-btnElm7.addEventListener('click', changeMove);
-btnElm8.addEventListener('click', changeMove);
-btnElm9.addEventListener('click', changeMove);
-btnElm10.addEventListener('click', changeMove);
+const signs = document.querySelectorAll('.grid-container button');
+
+const herniPole = () => {
+  const gameArray = Array.from(signs).map((sign) => {
+    if (sign.classList.contains('board__field--circle')) {
+      return 'o';
+    } else if (sign.classList.contains('board__field--cross')) {
+      return 'x';
+    }
+    return '_';
+  });
+
+  const vitez = findWinner(gameArray);
+
+  if (vitez === 'x') {
+    setTimeout(() => {
+      alert('Vyhrál hráč s křížky');
+      location.reload();
+    }, 200);
+  } else if (vitez === 'o') {
+    setTimeout(() => {
+      alert('Vyhrál hráč s kolečky');
+      location.reload();
+    }, 200);
+  } else if (vitez === 'tie') {
+    setTimeout(() => {
+      alert('Hra skončila remízou');
+      location.reload();
+    }, 200);
+  }
+};
+
+btnElm.forEach((button) => {
+  button.addEventListener('click', changeMove);
+});
 
 const restart = document.querySelector('.buttons-hra-restart');
 restart.addEventListener('click', (event) => {
