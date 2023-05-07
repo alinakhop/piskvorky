@@ -9,6 +9,7 @@ const changeMove = (event) => {
     event.target.classList.add('board__field--circle', 'zoom');
     currentPlayer = 'cross';
     player.className = 'board__player--cross';
+    response();
   } else if (currentPlayer === 'cross') {
     event.target.classList.add('board__field--cross', 'zoom');
     currentPlayer = 'circle';
@@ -48,6 +49,50 @@ const herniPole = () => {
       location.reload();
     }, 200);
   }
+};
+
+const response = () => {
+  btnElm.forEach((button) => {
+    button.disabled = true;
+  });
+
+  const gameArray = Array.from(btnElm).map((button) => {
+    if (button.classList.contains('board__field--circle')) {
+      return 'o';
+    } else if (button.classList.contains('board__field--cross')) {
+      return 'x';
+    } else {
+      return '_';
+    }
+  });
+
+  fetch('https://piskvorky.czechitas-podklady.cz/api/suggest-next-move', {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      board: gameArray,
+      player: 'x',
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const { x, y } = data.position;
+      const index = x + y * 10;
+      btnElm.forEach((button) => {
+        if (
+          button.classList.contains('board__field--cross') ||
+          button.classList.contains('board__field--circle')
+        ) {
+          button.disabled = true;
+        } else {
+          button.disabled = false;
+        }
+      });
+
+      btnElm[index].click();
+    });
 };
 
 btnElm.forEach((button) => {
